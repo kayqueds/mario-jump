@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Um jogo divertido do Mario" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="https://www.iconarchive.com/download/i27082/ph03nyx/super-mario/Mushroom-Super.ico" type="image/x-icon">
+  <title>Jogo do Mario Jump</title>
+  
+</head>
+<body>
+  <div class="score-board">
+    Pontuação: <span id="score">0</span>
+  </div>
+  <div class="controls">
+    <button class="pause-button" onclick="pausar()"><i class="fa-solid fa-pause"></i> Pausar</button>
+  </div>
+
+  <div class="game-board">
+    <img src="img/clouds.png" alt="nuvens" class="clouds" />
+    <img src="img/mario.gif" alt="mario" class="mario" />
+    <img src="img/pipe.png" alt="pipe" class="pipe" />
+  </div>
+<div class="instrucoes">
+    <h2>Instruções</h2>
+    <p>Pressione a tecla <span>"Espaço"</span> para pular e evitar os obstáculos!</p>
+    
+</div>
+
+<div class="game-container">
+  <div class="conteudo">
+  <img src="img/avatar_leve.jpg" alt="logo" class="logo">
+  <h2>Mario Jump</h2>
+  <p id="descricao">Um jogo divertido onde você controla o Mario pulando sobre obstáculos. Tente alcançar a maior pontuação possível!</p>
+
+  <section>
+    <!--github e linkedin links-->
+    <a href="https://github.com/kayqueds" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/kayquequeiroga/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+  </section>
+  </div>
+
+  
+  </div>
+<footer>
+    <p>&copy; 2025 Mario Jump. Todos os direitos reservados.</p>
+  </footer>
+
+<script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://kit.fontawesome.com/3b3ede6b66.js" crossorigin="anonymous"></script>
+</body>
+</html>

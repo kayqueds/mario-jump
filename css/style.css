@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'fonte-mario';
+    src: url(../fonts/CHLORINP.TTF) format('truetype');
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+      background-color: #dce3f0;
+
+    font-family: 'Verdana', sans-serif;
+}
+.game-board {
+    width: 80%;
+    height: 500px;
+    border-bottom: 15px solid rgb(82, 192, 82);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #1E90FF);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.instrucoes{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #fff;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+h2{
+    font-family: 'fonte-mario', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+span{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.score-board{
+  position: absolute;
+  top: 20px;
+  right: 12%;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+ .pause-button {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+    right: 1200px;
+    top: 10px;
+ }  
+.pause-button:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border: none
+}
+
+/*cano*/
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s linear infinite;
+}
+
+.inimigo{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: 0;
+    z-index: 5;
+    animation: pipe-animation 4s linear infinite;
+    animation-delay: 3.5s;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+.clouds{
+    width: 550px;
+    position: absolute;
+    animation: clouds-animation 10s linear infinite;
+}
+
+.jump{
+    animation: jump 500ms ease-out; 
+}
+/* animação do cano surgindo do lado direito */
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+  @keyframes jump {
+    0% {
+      bottom: 0;
+    }
+    40% {
+      bottom: 120px;
+    }
+    50% {
+      bottom: 120px;
+    }
+    60% {
+      bottom: 120px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+    .game-container {
+        width: 30%;
+        height: 100vh;
+        padding: 10px;
+    }
+    .game-board {
+        width: 100%;
+        height: 400px;
+    }
+    .mario {
+        width: 100px;
+    }
+    .pipe {
+        width: 60px;
+    }
+    .inimigo {
+        width: 60px;
+    }
+    .clouds {
+        width: 300px;
+    }
+    .score-board {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+    .pause-button {
+        width: 120px;
+        font-size: 14px;
+    }
+    .instrucoes {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+    footer{
+        font-size: 12px;
+        padding: 5px;
+    }
+    p{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+        margin-top: 100px;
+    }
+    .conteudo {
+        width: 90%;
+        margin-top: -50px;
+        padding: 10px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    #descricao {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .pause-button {
+        right: 10px;
+        top: 10px;
+        width: 100px;
+        font-size: 14px;
+    }
+  
+}
+
+
+section{
+    text-align: center;
+    width: 400px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+}
+
+a:hover{
+    background-color: #ca6410ff;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.game-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #1E90FF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#descricao {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Verdana', serif;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Verdana', serif;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -80px;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 50%;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+
+   
+    border-radius: 50%;
+}
+
